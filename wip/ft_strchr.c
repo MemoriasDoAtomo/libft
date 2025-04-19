@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:47:30 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/16 16:56:21 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/19 15:58:46 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 char	*strrchr(const char *string, int charac)
 {
-	if (charac == '\0')
-	{
-		return ((charac *)string);
-	}
+	char	*last;
+
+	last = NULL;
 	while (*string)
 	{
-		if (*string == charac)
-		{
-			return ((char *)string);
-		}
+		if (*string == (char)charac)
+			last = (char *)string;
 		string++;
 	}
-	return (NULL);
+	if ((char)charac == '\0')
+		return ((char *)string);
+	return (last);
 }
-
+/* 
 int	main(void)
 {
 	const char	*str;
@@ -46,3 +45,4 @@ int	main(void)
 	}
 	return (0);
 }
+ */
