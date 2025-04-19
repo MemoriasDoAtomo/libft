@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:59:45 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 17:56:13 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/19 17:57:37 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     }
     else
     {
-        return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+        return ((unsigned char)s1[index] - (unsigned char)s2[index]);
     }
 }
 /*
