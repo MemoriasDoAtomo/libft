@@ -6,32 +6,27 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 18:02:56 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 18:17:43 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/19 19:31:24 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
 
-char    *strrchr(const char *s, int c)
+
+char	*strrchr(const char *string, int charac)
 {
-    const   char *last;
+	const char	*last = NULL;
 
-    last = NULL;
-    if (c == '\0')
-    {
-        return ((char *) s);
-    }
+	while (*string)
+	{
+		if (*string == (char)charac)
+			last = string;
+		string++;
+	}
+	if ((char)charac == '\0')
+		return ((char *)string);
 
-    while (*s)
-    {
-        if (*s == c)
-        {
-            last = s;
-        }
-        s++;
-    }
-
-    return ((char *) last);
+	return ((char *)last);
 }
 
 
