@@ -1,49 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 17:47:30 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 19:28:26 by dcaires-         ###   ########.fr       */
+/*   Created: 2025/04/14 18:38:02 by dcaires-          #+#    #+#             */
+/*   Updated: 2025/04/19 18:13:54 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
 
-char	*strchr(const char *string, int charac)
-{
-	while (*string)
-	{
-		if (*string == (char)charac)
-		{
-			return ((char *)string);
-		}
-		string++;
-	}
-	if ((char)charac == '\0')
-	{
-		return ((char *)string);
-	}
-	return (NULL);
+void ft_bzero(void *s, size_t n) {
+    unsigned char *ptr;
+    
+    ptr = (unsigned char *)s;
+    while (n-- > 0) {
+        *ptr++ = 0;
+    }
 }
-/* 
-int	main(void)
-{
-	const char	*str;
-	char		*result;
 
-	str = "Bart o meu lindao!";
-	result = strrchr(str, 'o');
-	if (result)
+/* int	main(void)
+{
+	char buffer[10];
+	
+    int index = 0;
+	while (index < 10)
 	{
-		printf("Found 'o' at: %s\n", result);
+		buffer[index] = 'A';
+		index++;
 	}
-	else
+	ft_bzero(buffer, 5);
+	index = 0;
+	while (index < 10)
 	{
-		printf("'o' not found.\n");
+		printf("buffer[%d] = %d\n", index, (unsigned char)buffer[i]);
+		index++;
 	}
 	return (0);
-}
- */
+} */
