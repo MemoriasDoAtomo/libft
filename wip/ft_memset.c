@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   alibft.h                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 14:57:57 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 17:58:56 by dcaires-         ###   ########.fr       */
+/*   Created: 2025/04/10 18:47:18 by dcaires-          #+#    #+#             */
+/*   Updated: 2025/04/19 18:08:04 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ALIBFT_H
-# define ALIBFT_H
+#include "alibft.h"
 
-# include <stddef.h>
-# include <stdio.h>
-# include <string.h>
+void    *memset(void *s, int c, size_t n)
+{
+    unsigned char *ptr;
 
-int	ft_isdigit(int c);
-int	ft_isalpha(int c);
+    ptr = (unsigned char *)s;
+    while (n-- > 0)
+    {
+        *ptr++ = (unsigned char) c;
+    }
+    return (s);
+}
 
-#endif
+/* int main() {
+    char str1[10] = "Hello";
+    printf("Before memset (str1): %s\n", str1);
+    memset(str1, 'X', 3);
+    printf("After memset (str1): %s\n", str1);
+    return 0;
+}
+ */
