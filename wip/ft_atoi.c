@@ -6,13 +6,13 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:59:27 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/22 00:25:24 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 00:26:58 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
 
-int atoi(const char *str)
+int ft_atoi(const char *str)
 {
     size_t index;
     int negative;
@@ -44,7 +44,7 @@ int atoi(const char *str)
 
     return (result * negative);
 }
-
+/* 
 int main(void)
 {
     printf("Should be 42, got: %d\n", atoi("42"));
@@ -53,4 +53,4 @@ int main(void)
     printf("Should be 123, got: %d\n", atoi("   +123abc"));
     printf("Should be 0, got: %d\n", atoi("hello123"));
     return 0;
-}
+} */
