@@ -6,13 +6,13 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:47:30 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 19:28:26 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/21 16:09:30 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
 
-char	*strchr(const char *string, int charac)
+char	*ft_strchr(const char *string, int charac)
 {
 	while (*string)
 	{
@@ -35,7 +35,7 @@ int	main(void)
 	char		*result;
 
 	str = "Bart o meu lindao!";
-	result = strrchr(str, 'o');
+	result = ft_strrchr(str, 'o');
 	if (result)
 	{
 		printf("Found 'o' at: %s\n", result);

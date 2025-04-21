@@ -6,12 +6,11 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 18:02:56 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/19 19:31:24 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/21 15:50:14 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
-
 
 char	*strrchr(const char *string, int charac)
 {
@@ -25,20 +24,22 @@ char	*strrchr(const char *string, int charac)
 	}
 	if ((char)charac == '\0')
 		return ((char *)string);
-
 	return ((char *)last);
 }
 
+int	main(void)
+{
+	const char *str = "bartlo o meu lindao!";
+	char *result = strrchr(str, 'l');
 
-int main() {
-    const char *str = "bartlo o meu lindao!";
-    char *result = strrchr(str, 'l');
-    
-    if (result) {
-        printf("Found 'l' at: %s\n", result);
-    } else {
-        printf("'l' not found.\n");
-    }
+	if (result)
+	{
+		printf("Found 'l' at: %s\n", result);
+	}
+	else
+	{
+		printf("'l' not found.\n");
+	}
 
-    return 0;
+	return (0);
 }
