@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:15:31 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/22 00:34:49 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 00:46:21 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,20 @@ void *ft_calloc(size_t num, size_t size)
     return (array);
 }
 
-int main(void){
-    int index;
+int main(void)
+{
+    size_t index;
     int *array;
-    index = 0;
-    array = ft_calloc(5, 1);
+    size_t num_elements = 5;
 
-    while (array[index])
+    index = 0;
+    array = ft_calloc(num_elements, sizeof(int));
+    while (index < num_elements)
     {
-        printf("%d", array[index]);
+        printf("%d ", array[index]);
         index++;
     }
     printf("\n");
+    free(array);
     return 0;
 }
