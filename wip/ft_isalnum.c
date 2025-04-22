@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:36:40 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/16 16:31:16 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:48:56 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalnum(int c)
 	return (ft_isdigit(c) == 1 || ft_isalpha(c) == 1);
 }
 
-/* 
+/*
 int	main(void)
 {
 	printf("Passed a, Should be 1, got: %d\n", ft_isalnum('a'));

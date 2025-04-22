@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:22:06 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/21 16:09:53 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:50:29 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_toupper(int c)
 		return (c);
 	}
 }
-/* 
+/*
 int	main(void)
 {
 	printf("Passed A(65), Should be A(65), got: %d\n", ft_toupper('A'));
