@@ -6,32 +6,32 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 19:32:30 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/22 00:09:33 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 13:17:57 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "alibft.h"
 
-size_t ft_strlcpy(char *dest, const char *restrict src, size_t dsize)
+size_t	ft_strlcpy(char *dest, const char *restrict src, size_t dsize)
 {
-    size_t index;
-    
-    index = 0;
-    if (dsize > 0)
-    {
-        while (index < dsize - 1 && src[index] != '\0')
-        {
-            dest[index] = src[index];
-            index++;
-        }
-        dest[index] = '\0';
-    }
-    index = 0;
-    while (src[index] != '\0')
-    {
-        index++;
-    }
-    return (index);
+	size_t	index;
+
+	index = 0;
+	if (dsize > 0)
+	{
+		while (index < dsize - 1 && src[index] != '\0')
+		{
+			dest[index] = src[index];
+			index++;
+		}
+		dest[index] = '\0';
+	}
+	index = 0;
+	while (src[index] != '\0')
+	{
+		index++;
+	}
+	return (index);
 }
 
 /* int	main(void)
@@ -55,5 +55,3 @@ size_t ft_strlcpy(char *dest, const char *restrict src, size_t dsize)
 	printf("Test 4 - dsize is 0:\n");
 	printf("Returned: %zu | Copied (unchanged): %s\n", ret, dest);
 } */
-
-
