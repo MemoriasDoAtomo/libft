@@ -6,7 +6,7 @@
 /*   By: dcaires- <dcaires-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:11:35 by dcaires-          #+#    #+#             */
-/*   Updated: 2025/04/22 17:01:21 by dcaires-         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:07:56 by dcaires-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
             return (NULL);
         }
         substring[0] = '\0';
-        return (substring);
+        return ((char *)substring);
     }
 
     if (start + len > str_len){
